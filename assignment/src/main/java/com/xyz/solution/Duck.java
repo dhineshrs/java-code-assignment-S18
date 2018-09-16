@@ -1,24 +1,16 @@
 package com.xyz.solution;
 
-class Duck implements CanSwim, CanSing {
+class Duck extends Bird implements CanSwim {
 
-	Swim swim = new Swim("Duck");
 	Sing sing = new Sing("Quack, quack");
 
 	public Swim getSwim() {
-		return swim;
+		return new Swim("Duck");
 	}
 
-	public void swim() {
-		this.swim.swim();
-	}
-
-	public Sing getSing() {
-		return sing;
-	}
-	
-	public void sing(){
-		this.sing.sing();
+	@Override
+	public void sing(String message) {
+		super.sing(message);
 	}
 
 }

@@ -20,8 +20,8 @@ public class Solution {
 		bird.getSing().sing();
 
 		Duck duck = new Duck();
-		duck.sing();
-		duck.swim();
+		duck.sing("Quack, quack");
+		duck.getSwim().swim();
 
 		Bird chicken = new Chicken();
 		chicken.sing("Cluck, cluck");
@@ -66,10 +66,10 @@ public class Solution {
 	public static void main(String[] args) {
 		Solution solution = new Solution();
 
-		solution.checkWalkAnimal();
+//		solution.checkWalkAnimal();
 		solution.checkBirds();
-		solution.checkFish();
-		solution.checkButterFly();
+//		solution.checkFish();
+//		solution.checkButterFly();
 
 		System.out.println("Number of animals can swim :" + solution.swimAnimals());
 		System.out.println("Number of animals can fly :" + solution.flyAnimals());
