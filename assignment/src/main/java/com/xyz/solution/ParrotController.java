@@ -8,8 +8,8 @@ public class ParrotController implements Parrot {
 		this.parrot = parrot;
 	}
 
-	public void sing(String message) {
-		parrot.sing(message);
+	public String sing(String message) {
+		return parrot.sing(message);
 	}
 
 }

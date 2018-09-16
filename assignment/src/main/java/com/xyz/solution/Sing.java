@@ -7,7 +7,7 @@ public class Sing {
 		this.message = message;
 	}
 
-	public void sing() {
-		System.out.println("I am singing.." + message);
+	public String sing() {
+		return "I am singing.." + message;
 	}
 }

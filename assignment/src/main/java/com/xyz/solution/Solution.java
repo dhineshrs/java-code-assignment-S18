@@ -16,25 +16,25 @@ public class Solution {
 	public void checkBirds() {
 
 		Bird bird = new Bird();
-		bird.getFly().fly();
-		bird.getSing().sing();
+		System.out.println(bird.getFly().fly());
+		System.out.println(bird.getSing().sing());
 
 		Duck duck = new Duck();
-		duck.sing("Quack, quack");
-		duck.getSwim().swim();
+		System.out.println(duck.getSwim().swim());
+		System.out.println(duck.sing("Quack, quack"));
 
 		Bird chicken = new Chicken();
-		chicken.sing("Cluck, cluck");
+		System.out.println(chicken.sing("Cluck, cluck"));
 
-		Rooster rooster = new Rooster();
-		rooster.sing("Cock-a-doodle-doo");
+		Bird rooster = new Rooster();
+		System.out.println(rooster.sing("Cock-a-doodle-doo"));
 
 		ParrotController parrotWithDogsController = new ParrotController(new ParrotWithDogs());
 		ParrotController parrotWithCatsController = new ParrotController(new ParrotWithCats());
 		ParrotController parrotWithRoostersController = new ParrotController(new ParrotWithRoosters());
-		parrotWithDogsController.sing("Woof, woof");
-		parrotWithCatsController.sing("Meow");
-		parrotWithRoostersController.sing("Cock-a-doodle-doo");
+		System.out.println(rooster.sing(parrotWithDogsController.sing("Woof, woof")));
+		System.out.println(rooster.sing(parrotWithCatsController.sing("Meow")));
+		System.out.println(rooster.sing(parrotWithRoostersController.sing("Cock-a-doodle-doo")));
 
 	}
 
@@ -66,10 +66,10 @@ public class Solution {
 	public static void main(String[] args) {
 		Solution solution = new Solution();
 
-//		solution.checkWalkAnimal();
+		// solution.checkWalkAnimal();
 		solution.checkBirds();
-//		solution.checkFish();
-//		solution.checkButterFly();
+		// solution.checkFish();
+		// solution.checkButterFly();
 
 		System.out.println("Number of animals can swim :" + solution.swimAnimals());
 		System.out.println("Number of animals can fly :" + solution.flyAnimals());

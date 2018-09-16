@@ -1,11 +1,11 @@
 package com.xyz.solution;
 
-public class Rooster extends Bird{
+public class Rooster extends Bird {
 
 	Chicken chicken = new Chicken();
 
-	public void sing(String message) {
-		chicken.sing(message);
+	public String sing(String message) {
+		return new Chicken().sing(message);
 	}
 
 }
