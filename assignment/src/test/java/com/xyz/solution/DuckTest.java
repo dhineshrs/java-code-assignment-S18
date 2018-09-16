@@ -13,13 +13,13 @@ public class DuckTest extends TestCase {
 	@Test
 	public void testSing() {
 
-		assertEquals("I am singing..Quack, quack", "I am singing..Quack, quack");
+		assertEquals(duck.getSing("Quack, quack").sing(), "I am singing..Quack, quack");
 
 	}
-	
+
 	@Test
 	public void testSwim() {
-		assertEquals("I am swimming..Duck", "I am swimming..Duck");
+		assertEquals(duck.getSwim().swim(), "I am swimming..Duck");
 
 	}
 

@@ -12,7 +12,7 @@ public class ButterflyTest extends TestCase{
 	
 	@Test
 	public void testFly() {
-		assertEquals("I am flying.. Butterfly", "I am flying.. Butterfly");
+		assertEquals(butterfly.getFly("Butterfly").fly(), "I am flying..Butterfly");
 	}
 
 }

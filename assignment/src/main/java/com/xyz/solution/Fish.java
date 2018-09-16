@@ -6,8 +6,4 @@ public class Fish extends Animal implements CanSwim {
 		return new Swim("Fish");
 	}
 
-//	public Swim swim() {
-//		return this.swim;
-//	}
-
 }

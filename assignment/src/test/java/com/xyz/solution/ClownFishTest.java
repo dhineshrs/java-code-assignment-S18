@@ -6,10 +6,11 @@ import junit.framework.TestCase;
 
 public class ClownFishTest extends TestCase{
 	
+	ClownFish clownFish = new ClownFish();
 
 	@Test
 	public void testSwim(){
-		assertEquals("I am swimming..ClownFish", "I am swimming..ClownFish");
+		assertEquals(clownFish.getSwim().swim(), "I am swimming..ClownFish");
 	}
 	
 	@Test

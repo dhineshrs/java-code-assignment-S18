@@ -21,35 +21,35 @@ public class Solution {
 
 		Duck duck = new Duck();
 		System.out.println(duck.getSwim().swim());
-		System.out.println(duck.sing("Quack, quack"));
+		System.out.println(duck.getSing("Quack, quack").sing());
 
 		Bird chicken = new Chicken();
-		System.out.println(chicken.sing("Cluck, cluck"));
+		System.out.println(chicken.getSing("Cluck, cluck").sing());
 
 		Bird rooster = new Rooster();
-		System.out.println(rooster.sing("Cock-a-doodle-doo"));
+		System.out.println(rooster.getSing("Cock-a-doodle-doo").sing());
 
 		ParrotController parrotWithDogsController = new ParrotController(new ParrotWithDogs());
 		ParrotController parrotWithCatsController = new ParrotController(new ParrotWithCats());
 		ParrotController parrotWithRoostersController = new ParrotController(new ParrotWithRoosters());
-		System.out.println(rooster.sing(parrotWithDogsController.sing("Woof, woof")));
-		System.out.println(rooster.sing(parrotWithCatsController.sing("Meow")));
-		System.out.println(rooster.sing(parrotWithRoostersController.sing("Cock-a-doodle-doo")));
+		System.out.println(parrotWithDogsController.sing("Woof, woof"));
+		System.out.println(parrotWithCatsController.sing("Meow"));
+		System.out.println(parrotWithRoostersController.sing("Cock-a-doodle-doo"));
 
 	}
 
 	public void checkFish() {
 		Fish fish = new Fish();
-		fish.getSwim().swim();
-
+		System.out.println(fish.getSwim().swim());
+		
 		Shark shark = new Shark();
-		shark.getSwim().swim();
+		System.out.println(shark.getSwim().swim());
 		shark.eat();
 		shark.size();
 		shark.color();
 
 		ClownFish cownFish = new ClownFish();
-		cownFish.getSwim().swim();
+		System.out.println(cownFish.getSwim().swim());
 		cownFish.size();
 		cownFish.joke();
 		cownFish.color();
@@ -59,17 +59,17 @@ public class Solution {
 	}
 
 	public void checkButterFly() {
-		Butterfly butterfly = new Butterfly();
-		butterfly.fly();
+		Bird butterfly = new Butterfly();
+		System.out.println(butterfly.getFly("Butterfly").fly());
 	}
 
 	public static void main(String[] args) {
 		Solution solution = new Solution();
 
 		// solution.checkWalkAnimal();
-		solution.checkBirds();
-		// solution.checkFish();
-		// solution.checkButterFly();
+		//solution.checkBirds();
+		solution.checkFish();
+		 //solution.checkButterFly();
 
 		System.out.println("Number of animals can swim :" + solution.swimAnimals());
 		System.out.println("Number of animals can fly :" + solution.flyAnimals());

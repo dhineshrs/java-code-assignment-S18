@@ -4,12 +4,13 @@ import org.junit.Test;
 
 import junit.framework.TestCase;
 
-public class ParrotWithDogsTest extends TestCase{
-	
+public class ParrotWithDogsTest extends TestCase {
+
+	ParrotController parrotWithDogsController = new ParrotController(new ParrotWithDogs());
 
 	@Test
-	public void testSing(){
-		assertEquals("ParrotWithDogs  Woof, woof", "ParrotWithDogs  Woof, woof");
-		
+	public void testSing() {
+		assertEquals(parrotWithDogsController.sing("Woof, woof"), "ParrotWithDogs  Woof, woof");
+
 	}
 }

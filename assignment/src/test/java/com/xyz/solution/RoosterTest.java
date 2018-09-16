@@ -6,9 +6,11 @@ import junit.framework.TestCase;
 
 public class RoosterTest extends TestCase{
 	
+	Rooster rooster = new Rooster();
+	
 	@Test
 	public void testRooster() {
-		assertEquals("I am singing..Cluck, cluck","I am singing..Cluck, cluck");
+		assertEquals(rooster.sing("Cluck, cluck").sing(),"I am singing..Cluck, cluck");
 	}
 
 }

@@ -4,8 +4,8 @@ public class Rooster extends Bird {
 
 	Chicken chicken = new Chicken();
 
-	public String sing(String message) {
-		return new Chicken().sing(message);
+	public Sing sing(String message) {
+		return new Chicken().getSing(message);
 	}
 
 }

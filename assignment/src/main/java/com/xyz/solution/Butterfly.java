@@ -1,14 +1,9 @@
 package com.xyz.solution;
 
-public class Butterfly implements CanFly {
+public class Butterfly extends Bird {
 
-	Fly fly = new Fly("Butterfly");
-	
+	@Override
 	public Fly getFly() {
-		return fly;
-	}
-
-	public void fly() {
-		this.fly.fly();
+		return super.getFly();
 	}
 }

@@ -4,30 +4,31 @@ import org.junit.Test;
 
 import junit.framework.TestCase;
 
-public class SharkTest extends TestCase{
-	
+public class SharkTest extends TestCase {
+
+	Shark shark = new Shark();
 
 	@Test
-	public void testSwim(){
-		assertEquals("I am swimming..Shark", "I am swimming..Shark");
-		
+	public void testSwim() {
+		assertEquals(shark.getSwim().swim(), "I am swimming..Shark");
+
 	}
-	
+
 	@Test
-	public void testSize(){
+	public void testSize() {
 		assertEquals("I am Shark. Size is Large", "I am Shark. Size is Large");
-		
+
 	}
-	
+
 	@Test
-	public void testColor(){
+	public void testColor() {
 		assertEquals("I am Shark. My Color is Grey", "I am Shark. My Color is Grey");
-		
+
 	}
-	
+
 	@Test
-	public void testEat(){
+	public void testEat() {
 		assertEquals("I am Shark. I can eat fish", "I am Shark. I can eat fish");
-		
+
 	}
 }
